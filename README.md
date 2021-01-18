@@ -25,9 +25,12 @@ This can be achieved by making the systems intelligent, so that, once we provide
 Phase 1:
 1. Creation of Similarity matrix and mapping existing controls to the query made by Auditor.
 2. Design an API using python and deploy to the SAP API Hub for active instance of API.
+
+<br>
 Phase 2:
 1. Take the input in three major forms. Free text, Excel Document of Requirement, Audit Document.
 2. If input is Audit document, use NLP Summarize to summarize the Data.
 3. Feed the information to matrix created.
+<br>
 Phase 3:
 1. Designing of UI using Angular 9.
