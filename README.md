@@ -1,27 +1,33 @@
-# EmpData
+# Regulation Requirement Mapping to Controls
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+## GRC Focus Area - Auditors' Perspective
 
-## Development server
+Every industry is administered by one or multiple regulations. For instance, just in the US, there are at least ten different financial regulators with hundreds of regulation requirements that apply to different entities to ensure the integrity and cohesion of the economic system as well as to conserve the interests of common people.
+This does not only complicate the enforcement process for the regulators but also makes things hard to track for the entities that need to comply with these regulations.
+Regulatory management is still one of the most manual GRC tasks. Authorities provide a detailed document to the users who are then responsible for reading, understanding, creating Regulation Requirements and then mapping it to the entities manually. This is a cumbersome task and takes a lot of manual efforts.
+Further, Auditors usually pull deficient controls and sample of passed controls to review them and ensure the control was applied as designed. This again is a manual process and equally tiresome.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<br>
+<Br>
 
-## Code scaffolding
+The idea is, to make regulatory compliance smart to reduce the manual efforts invested in reading the document and then creating/reviewing the requirements in the GRC system.
+This can be achieved by making the systems intelligent, so that, once we provide a document, it should be able to process the provided document’s content and infer the Requirements of regulations. Further, the system should also be able to create these requirements in the system and suggest the appropriate mapping with controls. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<br>
 
-## Build
+## High Level Diagram - Technical Architecture
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![](/Images/HLD.png)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Execution of Idea - 3 Phases
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Phase 1:
+1. Creation of Similarity matrix and mapping existing controls to the query made by Auditor.
+2. Design an API using python and deploy to the SAP API Hub for active instance of API.
+Phase 2:
+1. Take the input in three major forms. Free text, Excel Document of Requirement, Audit Document.
+2. If input is Audit document, use NLP Summarize to summarize the Data.
+3. Feed the information to matrix created.
+Phase 3:
+1. Designing of UI using Angular 9.
