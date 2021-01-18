@@ -1,0 +1,24 @@
+<h4 fd-form-header>Free Text Input</h4>
+<br>
+<div fd-form-item>
+    <textarea fd-form-control id="textarea-1" placeholder="Field placeholder text" [(ngModel)]="query"></textarea>
+    <button fd-button label="Search for Controls" [fdType]="'emphasized'" [glyph]="'search'" (click)="onSearch()"></button>
+</div>
+<br>
+<br>
+<table fd-table>
+    <thead fd-table-header>
+        <tr fd-table-row>
+            <th fd-table-cell>Control Description</th>
+            <th fd-table-cell>Score</th>
+            <th fd-table-cell>Mapped</th>
+        </tr>
+    </thead>
+    <tbody fd-table-body>
+        <tr *ngFor="let row of tableRows" fd-table-row>
+            <td fd-table-cell>{{ row.control }}</td>
+            <td fd-table-cell>{{ row.score }}</td>
+            <td fd-table-cell><fd-icon [glyph]="row.mapped"></fd-icon></td>
+        </tr>
+    </tbody>
+</table>
