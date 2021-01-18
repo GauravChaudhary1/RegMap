@@ -36,3 +36,7 @@ Phase 2:
 
 Phase 3:
 1. Designing of UI using Angular 9.
+
+## To avoid CORS issue locally, run in disabled security chrome
+
+For chrome - navigate to folder for chrome and execute command - "./chrome.exe --disable-web-security --user-data-dir=c:\my-chrome-data\data"
